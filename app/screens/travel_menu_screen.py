@@ -56,15 +56,7 @@ class TravelMenuScreen(tk.Frame):
         bg = tk.Label(self, image=self.bg_image)
         bg.place(x=0, y=0, relwidth=1, relheight=1)
 
-        # ==== BAŞLIK ====
-        title = tk.Label(
-            self,
-            text="Travel Menu",
-            font=("Arial", 26, "bold"),
-            fg="white",
-            bg="black"
-        )
-        title.place(relx=0.5, rely=0.18, anchor="center")
+
 
         # ==== 2x2 BUTTON GRID ====
 
@@ -82,7 +74,7 @@ class TravelMenuScreen(tk.Frame):
             self,
             text="My Travel Plans",
             width=18,
-            command=self.on_my_travel_plans
+            command=self.master.show_my_travel_plans
         )
         btn2.place(relx=0.62, rely=0.40, anchor="center")
 
@@ -111,7 +103,7 @@ class TravelMenuScreen(tk.Frame):
             width=10,
             command=self.on_back
         )
-        back_btn.place(relx=0.22, rely=0.82)
+        back_btn.place(relx=0.22, rely=0.70)
 
 
     # ===== HANDLERS =====

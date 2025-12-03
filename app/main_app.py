@@ -7,6 +7,8 @@ from app.screens.user_login_screen import UserLoginScreen
 from app.screens.register_screen import RegisterScreen
 from app.screens.travel_menu_screen import TravelMenuScreen
 from app.screens.create_travel_plan_screen import CreateTravelPlanScreen
+from app.screens.travel_plans_screen import MyTravelPlansScreen
+
 
 
 class App(tk.Tk):
@@ -98,6 +100,13 @@ class App(tk.Tk):
         )
         self.current_screen.pack(fill="both", expand=True)
 
+    def show_my_travel_plans(self):
+        self.clear_screen()
+        self.current_screen = MyTravelPlansScreen(
+            master=self,
+            on_back=self.show_travel_menu   # geri dönünce travel menu'ye dön
+        )
+        self.current_screen.pack(fill="both", expand=True)
 
 # Uygulamayı çalıştır
 if __name__ == "__main__":
