@@ -1,9 +1,12 @@
 import tkinter as tk
 
+from app.screens import travel_menu_screen
 from app.screens.welcome_screen import WelcomeScreen
 from app.screens.admin_login_screen import AdminLoginScreen
 from app.screens.user_login_screen import UserLoginScreen
 from app.screens.register_screen import RegisterScreen
+from app.screens.travel_menu_screen import TravelMenuScreen
+from app.screens.create_travel_plan_screen import CreateTravelPlanScreen
 
 
 class App(tk.Tk):
@@ -79,6 +82,21 @@ class App(tk.Tk):
         print("Email:", email)
         print("Doğum tarihi:", dob)
         # İLERİDE buraya MSSQL INSERT yazacağız
+
+    def show_travel_menu(self):
+        self.clear_screen()
+        self.current_screen = travel_menu_screen.TravelMenuScreen(
+            master=self,
+            on_back=self.show_user_login
+        )
+        self.current_screen.pack(fill="both", expand=True)
+    def show_create_travel_plan(self):
+        self.clear_screen()
+        self.current_screen = CreateTravelPlanScreen(
+            master=self,
+            on_back=self.show_travel_menu   # geri dönünce travel menu'ye
+        )
+        self.current_screen.pack(fill="both", expand=True)
 
 
 # Uygulamayı çalıştır

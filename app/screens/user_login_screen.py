@@ -135,6 +135,7 @@ class UserLoginScreen(tk.Frame):
             self.password_entry.config(show="*")
 
     # ===== LOGIN CLICK =====
+
     def on_login_clicked(self):
         email = self.email_entry.get().strip()
         pw = self.password_entry.get().strip()
@@ -144,7 +145,8 @@ class UserLoginScreen(tk.Frame):
             return
 
         if email in USERS and USERS[email] == pw:
-            messagebox.showinfo("Login", "Login successful!")
+            # Login başarılı → Travel Menu ekranına geç
+            self.master.show_travel_menu()
         else:
             messagebox.showerror("Login", "Invalid e-mail or password.")
 

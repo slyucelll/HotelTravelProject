@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50523539-595a-4f7c-a20b-5a118c563f77" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HotelTravelProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HotelTravelProject.iml" afterDir="false" />
+    <list default="true" id="50523539-595a-4f7c-a20b-5a118c563f77" name="Changes" comment="system">
+      <change afterPath="$PROJECT_DIR$/app/screens/create_travel_plan_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/reservations_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/search_hotels_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/travel_plans_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/create_plan_screenn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/travel_menu_screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/travel_plan_screen.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/admin_login_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/admin_login_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/register_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/register_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/travel_menu_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/travel_menu_screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/screens/user_login_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/user_login_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/welcome_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/welcome_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/seyahat_menu_screen.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +60,7 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.main_app.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
@@ -66,7 +71,7 @@
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="HotelTravelProject" />
       <option name="ENV_FILES" value="" />
@@ -89,9 +94,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main_app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HotelTravelProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main_app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.main_app" />
       </list>
     </recent_temporary>
   </component>
@@ -110,6 +138,27 @@
       <option name="presentableId" value="Default" />
       <updated>1764525971131</updated>
     </task>
+    <task id="LOCAL-00001" summary="system">
+      <option name="closed" value="true" />
+      <created>1764614000336</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764614000336</updated>
+    </task>
+    <task id="LOCAL-00002" summary="system">
+      <option name="closed" value="true" />
+      <created>1764614065542</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764614065542</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="system" />
+    <option name="LAST_COMMIT_MESSAGE" value="system" />
   </component>
 </project>
