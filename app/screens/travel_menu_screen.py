@@ -79,12 +79,12 @@ class TravelMenuScreen(tk.Frame):
         btn2.place(relx=0.62, rely=0.40, anchor="center")
 
         # SOL ALT - Search Hotels
-        btn3 = ModernButton(
-            self,
-            text="Search Hotels",
-            width=18,
-            command=self.on_search_hotels
-        )
+        btn3  = ModernButton(
+    self,
+    text="Search Hotels",
+    width=18,
+    command=lambda: self.master.show_search_hotel()   # plan_data YOK
+)
         btn3.place(relx=0.38, rely=0.55, anchor="center")
 
         # SAĞ ALT - My Reservations
@@ -92,7 +92,7 @@ class TravelMenuScreen(tk.Frame):
             self,
             text="My Reservations",
             width=18,
-            command=self.on_my_reservations
+            command=self.master.show_my_reservations
         )
         btn4.place(relx=0.62, rely=0.55, anchor="center")
 

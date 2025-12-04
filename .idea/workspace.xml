@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50523539-595a-4f7c-a20b-5a118c563f77" name="Changes" comment="system">
+      <change afterPath="$PROJECT_DIR$/app/screens/payment_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/hotels_screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/payment_screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/reservations_screen.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/create_travel_plan_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/create_travel_plan_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/reservations_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/reservations_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/search_hotels_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/search_hotels_screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/screens/travel_menu_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/travel_menu_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/travel_plans_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/travel_plans_screen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764790892011</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="system">
+      <option name="closed" value="true" />
+      <created>1764793629065</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764793629065</updated>
+    </task>
+    <task id="LOCAL-00005" summary="system">
+      <option name="closed" value="true" />
+      <created>1764793636738</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764793636738</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

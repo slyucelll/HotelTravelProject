@@ -133,7 +133,7 @@ class CreateTravelPlanScreen(tk.Frame):
                 self,
                 width=18,
                 font=("Arial", 12),
-                date_pattern="yyyy-mm-dd",
+                date_pattern="yyyy-MM-dd",
             )
         else:
             self.start_date_input = tk.Entry(
@@ -153,7 +153,7 @@ class CreateTravelPlanScreen(tk.Frame):
                 self,
                 width=18,
                 font=("Arial", 12),
-                date_pattern="yyyy-mm-dd",
+                date_pattern="yyyy-MM-dd",
             )
         else:
             self.end_date_input = tk.Entry(
@@ -183,8 +183,8 @@ class CreateTravelPlanScreen(tk.Frame):
         # CREATE PLAN (sağ alt)
         create_btn = ModernButton(
             self,
-            text="CREATE PLAN",
-            width=16,
+            text="CREATE PLAN AND SELECT HOTELS",
+            width=27,
             command=self.save_plan
         )
         create_btn.place(relx=0.70, rely=0.83, anchor="center")
@@ -230,18 +230,26 @@ class CreateTravelPlanScreen(tk.Frame):
             messagebox.showerror("Error", "End date cannot be before start date.")
             return
 
-        # Şimdilik sadece bilgi gösteriyoruz, sonra MSSQL'e kaydedersin
-        messagebox.showinfo(
-            "Success",
-            "Travel plan created successfully!\n\n"
-            f"Plan: {plan_name}\n"
-            f"Country: {country}\n"
-            f"City: {city}\n"
-            f"People: {people}\n"
-            f"Budget: {budget}\n"
-            f"Start: {start_date}\n"
-            f"End: {end_date}"
-        )
+        # --- SearchHotelScreen'e göndereceğimiz plan bilgisi ---
+        plan_data = {
+            "plan_name": plan_name,
+            "country": country,
+            "city": city,
+            "destination": f"{city}, {country}",
+            "guests": int(people),
+            "budget_range": budget,
+            "start_date": start_date,
+            "end_date": end_date
+        }
+
+        # Artık sadece bilgi göstermek yerine Search Hotel ekranına geçiyoruz
+        try:
+            self.master.show_search_hotel(plan_data)
+        except AttributeError:
+            messagebox.showerror(
+                "Navigation error",
+                "App içinde show_search_hotel(plan_data) fonksiyonu tanımlı değil."
+            )
 
     def _get_date_string(self, widget):
         """DateEntry varsa ordan, yoksa normal Entry'den string alır."""
