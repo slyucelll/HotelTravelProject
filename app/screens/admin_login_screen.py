@@ -43,10 +43,10 @@ class AdminLoginScreen(tk.Frame):
     def __init__(self, master, on_back, *args, **kwargs):
         super().__init__(master, *args, **kwargs)
 
+        self.master = master
         self.on_back = on_back
 
         # ==== BACKGROUND FOTOĞRAF ====
-        # Foto yolu → HotelTravelProject/images/adminloginscreen.jpg
         img_path = os.path.join(
             os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
             "images",
@@ -137,5 +137,7 @@ class AdminLoginScreen(tk.Frame):
 
         if email == ADMIN_EMAIL and pw == ADMIN_PASSWORD:
             messagebox.showinfo("Admin Login", "Login successful! (test admin)")
+            # 🔹 BAŞARILI GİRİŞ → ADMIN MENU
+            self.master.show_admin_menu()
         else:
             messagebox.showerror("Admin Login", "Invalid e-mail or password.")

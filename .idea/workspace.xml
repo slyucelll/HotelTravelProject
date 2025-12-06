@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50523539-595a-4f7c-a20b-5a118c563f77" name="Changes" comment="system">
-      <change afterPath="$PROJECT_DIR$/app/screens/payment_screen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hotels_screen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/payment_screen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/reservations_screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/admin_menu_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/countryandcity_management_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/hotel_management_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/reservations_management_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/room_management_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/screens/users_management_screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/create_travel_plan_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/create_travel_plan_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/reservations_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/reservations_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/search_hotels_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/search_hotels_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/screens/travel_menu_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/travel_menu_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/admin_login_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/admin_login_screen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764793636738</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="system">
+      <option name="closed" value="true" />
+      <created>1764878386698</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764878386698</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

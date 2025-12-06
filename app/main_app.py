@@ -9,7 +9,8 @@ from app.screens.create_travel_plan_screen import CreateTravelPlanScreen
 from app.screens.travel_plans_screen import MyTravelPlansScreen
 from app.screens.reservations_screen import MyReservationsScreen
 from app.screens.search_hotels_screen import SearchHotelScreen
-from app.screens.payment_screen import PaymentScreen   # dosyanın en üstüne ekle
+from app.screens.payment_screen import PaymentScreen
+
 
 class App(tk.Tk):
     def __init__(self):
@@ -20,10 +21,14 @@ class App(tk.Tk):
         self.configure(bg="white")
 
         self.current_screen = None
-        self.show_welcome()
         self.current_user_id = 1
+
+        # Rezervasyon listesi
         self.reservations = []
         self.next_reservation_id = 1
+
+        # ilk ekran
+        self.show_welcome()
 
     def clear_screen(self):
         if self.current_screen is not None:
@@ -44,6 +49,16 @@ class App(tk.Tk):
     def show_admin_login(self):
         self.clear_screen()
         self.current_screen = AdminLoginScreen(
+            master=self,
+            on_back=self.show_welcome
+        )
+        self.current_screen.pack(fill="both", expand=True)
+
+    # ========== ADMIN MENU ==========
+    def show_admin_menu(self):
+        from app.screens.admin_menu_screen import AdminMenuScreen
+        self.clear_screen()
+        self.current_screen = AdminMenuScreen(
             master=self,
             on_back=self.show_welcome
         )
@@ -107,6 +122,7 @@ class App(tk.Tk):
         )
         self.current_screen.pack(fill="both", expand=True)
 
+    # ========== SEARCH HOTEL ==========
     def show_search_hotel(self, plan_data=None):
         self.clear_screen()
         self.current_screen = SearchHotelScreen(
@@ -116,6 +132,7 @@ class App(tk.Tk):
         )
         self.current_screen.pack(fill="both", expand=True)
 
+    # ========== RESERVATION YÖNETİMİ (USER TARAFI) ==========
     def add_reservation(self, reservation_data: dict) -> int:
         reservation = {
             "id": self.next_reservation_id,
@@ -129,11 +146,8 @@ class App(tk.Tk):
     def get_reservations_for_current_user(self):
         return [r for r in self.reservations if r["user_id"] == self.current_user_id]
 
+    # ========== PAYMENT ==========
     def show_payment(self, reservation=None):
-        """
-        Payment ekranını açar.
-        reservation: dict ya da None (şimdilik None da gönderebiliriz).
-        """
         self.clear_screen()
         self.current_screen = PaymentScreen(
             master=self,
@@ -141,6 +155,39 @@ class App(tk.Tk):
             on_back=self.show_my_reservations
         )
         self.current_screen.pack(fill="both", expand=True)
+
+    # ========== ADMIN MANAGEMENT SCREENS (ileri için) ==========
+    def show_country_city_mgmt(self):
+        from app.screens.countryandcity_management_screen import CountryAndCityManagementScreen
+        self.clear_screen()
+        self.current_screen = CountryAndCityManagementScreen(self, self.show_admin_menu)
+        self.current_screen.pack(fill="both", expand=True)
+
+    def show_hotel_mgmt(self):
+        from app.screens.hotel_management_screen import HotelManagementScreen
+        self.clear_screen()
+        self.current_screen = HotelManagementScreen(self, self.show_admin_menu)
+        self.current_screen.pack(fill="both", expand=True)
+
+    def show_reservations_mgmt(self):
+        from app.screens.reservations_management_screen import ReservationsManagementScreen
+        self.clear_screen()
+        self.current_screen = ReservationsManagementScreen(self, self.show_admin_menu)
+        self.current_screen.pack(fill="both", expand=True)
+
+    def show_room_mgmt(self):
+        from app.screens.room_management_screen import RoomManagementScreen
+        self.clear_screen()
+        self.current_screen = RoomManagementScreen(self, self.show_admin_menu)
+        self.current_screen.pack(fill="both", expand=True)
+
+    def show_users_mgmt(self):
+        from app.screens.users_management_screen import UsersManagementScreen
+        self.clear_screen()
+        self.current_screen = UsersManagementScreen(self, self.show_admin_menu)
+        self.current_screen.pack(fill="both", expand=True)
+
+
 if __name__ == "__main__":
     app = App()
     app.mainloop()
