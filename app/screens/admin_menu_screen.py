@@ -34,7 +34,7 @@ class AdminMenuScreen(tk.Frame):
         img_path = os.path.join(
             os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
             "images",
-            "welcomecreen.jpg"
+            "admin_menu_screen.jpg"
         )
 
         if os.path.exists(img_path):
@@ -54,21 +54,21 @@ class AdminMenuScreen(tk.Frame):
             text="Country & City Management",
             width=25,
             command=self.master.show_country_city_mgmt
-        ).place(relx=0.18, rely=0.45, anchor="w")
+        ).place(relx=0.18, rely=0.52, anchor="w")
 
         ModernButton(
             self,
             text="Hotel Management",
             width=25,
             command=self.master.show_hotel_mgmt
-        ).place(relx=0.18, rely=0.56, anchor="w")
+        ).place(relx=0.18, rely=0.61, anchor="w")
 
         ModernButton(
             self,
             text="Users Management",
             width=25,
             command=self.master.show_users_mgmt
-        ).place(relx=0.18, rely=0.67, anchor="w")
+        ).place(relx=0.18, rely=0.70, anchor="w")
 
         # Right column
         ModernButton(
@@ -76,16 +76,14 @@ class AdminMenuScreen(tk.Frame):
             text="Reservations Management",
             width=25,
             command=self.master.show_reservations_mgmt
-        ).place(relx=0.62, rely=0.45, anchor="w")
+        ).place(relx=0.55, rely=0.52, anchor="w")
 
         ModernButton(
             self,
             text="Room Management",
             width=25,
             command=self.master.show_room_mgmt
-        ).place(relx=0.62, rely=0.56, anchor="w")
-
-
+        ).place(relx=0.55, rely=0.61, anchor="w")
 
         # ===============================
         #          BACK BUTTON

@@ -28,6 +28,7 @@ class App(tk.Tk):
         self.next_reservation_id = 1
 
         # ilk ekran
+        print("DEBUG: App initialized")
         self.show_welcome()
 
     def clear_screen(self):
@@ -37,6 +38,7 @@ class App(tk.Tk):
 
     # ========== WELCOME ==========
     def show_welcome(self):
+        print("DEBUG: show_welcome called")
         self.clear_screen()
         self.current_screen = WelcomeScreen(
             master=self,
@@ -47,6 +49,7 @@ class App(tk.Tk):
 
     # ========== ADMIN LOGIN ==========
     def show_admin_login(self):
+        print("DEBUG: show_admin_login called")
         self.clear_screen()
         self.current_screen = AdminLoginScreen(
             master=self,
@@ -56,6 +59,7 @@ class App(tk.Tk):
 
     # ========== ADMIN MENU ==========
     def show_admin_menu(self):
+        print("DEBUG: show_admin_menu called")
         from app.screens.admin_menu_screen import AdminMenuScreen
         self.clear_screen()
         self.current_screen = AdminMenuScreen(
@@ -64,8 +68,17 @@ class App(tk.Tk):
         )
         self.current_screen.pack(fill="both", expand=True)
 
+    # ========== COUNTRY & CITY MGMT ==========
+    def show_country_city_mgmt(self):
+        print("DEBUG: show_country_city_mgmt called")
+        from app.screens.countryandcity_management_screen import CountryAndCityManagementScreen
+        self.clear_screen()
+        self.current_screen = CountryAndCityManagementScreen(master=self, on_back=self.show_admin_menu)
+        self.current_screen.pack(fill="both", expand=True)
+
     # ========== USER LOGIN ==========
     def show_user_login(self):
+        print("DEBUG: show_user_login called")
         self.clear_screen()
         self.current_screen = UserLoginScreen(
             master=self,
@@ -75,6 +88,7 @@ class App(tk.Tk):
 
     # ========== REGISTER ==========
     def show_register(self):
+        print("DEBUG: show_register called")
         self.clear_screen()
         self.current_screen = RegisterScreen(
             master=self,
@@ -88,6 +102,7 @@ class App(tk.Tk):
 
     # ========== TRAVEL MENU ==========
     def show_travel_menu(self):
+        print("DEBUG: show_travel_menu called")
         self.clear_screen()
         self.current_screen = TravelMenuScreen(
             master=self,
@@ -97,6 +112,7 @@ class App(tk.Tk):
 
     # ========== CREATE TRAVEL PLAN ==========
     def show_create_travel_plan(self):
+        print("DEBUG: show_create_travel_plan called")
         self.clear_screen()
         self.current_screen = CreateTravelPlanScreen(
             master=self,
@@ -106,6 +122,7 @@ class App(tk.Tk):
 
     # ========== MY TRAVEL PLANS ==========
     def show_my_travel_plans(self):
+        print("DEBUG: show_my_travel_plans called")
         self.clear_screen()
         self.current_screen = MyTravelPlansScreen(
             master=self,
@@ -115,6 +132,7 @@ class App(tk.Tk):
 
     # ========== MY RESERVATIONS ==========
     def show_my_reservations(self):
+        print("DEBUG: show_my_reservations called")
         self.clear_screen()
         self.current_screen = MyReservationsScreen(
             master=self,
@@ -124,6 +142,7 @@ class App(tk.Tk):
 
     # ========== SEARCH HOTEL ==========
     def show_search_hotel(self, plan_data=None):
+        print("DEBUG: show_search_hotel called")
         self.clear_screen()
         self.current_screen = SearchHotelScreen(
             master=self,
@@ -141,6 +160,7 @@ class App(tk.Tk):
         }
         self.reservations.append(reservation)
         self.next_reservation_id += 1
+        print("DEBUG: reservation added, id=", reservation["id"])
         return reservation["id"]
 
     def get_reservations_for_current_user(self):
@@ -148,6 +168,7 @@ class App(tk.Tk):
 
     # ========== PAYMENT ==========
     def show_payment(self, reservation=None):
+        print("DEBUG: show_payment called")
         self.clear_screen()
         self.current_screen = PaymentScreen(
             master=self,
@@ -157,31 +178,29 @@ class App(tk.Tk):
         self.current_screen.pack(fill="both", expand=True)
 
     # ========== ADMIN MANAGEMENT SCREENS (ileri için) ==========
-    def show_country_city_mgmt(self):
-        from app.screens.countryandcity_management_screen import CountryAndCityManagementScreen
-        self.clear_screen()
-        self.current_screen = CountryAndCityManagementScreen(self, self.show_admin_menu)
-        self.current_screen.pack(fill="both", expand=True)
-
     def show_hotel_mgmt(self):
+        print("DEBUG: show_hotel_mgmt called")
         from app.screens.hotel_management_screen import HotelManagementScreen
         self.clear_screen()
         self.current_screen = HotelManagementScreen(self, self.show_admin_menu)
         self.current_screen.pack(fill="both", expand=True)
 
     def show_reservations_mgmt(self):
+        print("DEBUG: show_reservations_mgmt called")
         from app.screens.reservations_management_screen import ReservationsManagementScreen
         self.clear_screen()
         self.current_screen = ReservationsManagementScreen(self, self.show_admin_menu)
         self.current_screen.pack(fill="both", expand=True)
 
     def show_room_mgmt(self):
+        print("DEBUG: show_room_mgmt called")
         from app.screens.room_management_screen import RoomManagementScreen
         self.clear_screen()
         self.current_screen = RoomManagementScreen(self, self.show_admin_menu)
         self.current_screen.pack(fill="both", expand=True)
 
     def show_users_mgmt(self):
+        print("DEBUG: show_users_mgmt called")
         from app.screens.users_management_screen import UsersManagementScreen
         self.clear_screen()
         self.current_screen = UsersManagementScreen(self, self.show_admin_menu)

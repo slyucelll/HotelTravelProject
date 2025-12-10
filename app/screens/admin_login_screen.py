@@ -16,7 +16,7 @@ class ModernButton(tk.Button):
             fg="#1f1f1f",
             bg="#ffffff",
             activebackground="#e6e6e6",
-            activeforeground="#000000",
+
             relief="flat",
             bd=2,
             highlightthickness=0,
